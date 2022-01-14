@@ -18,4 +18,24 @@ class Stack
         @curr_stack[-1]
       # returns, but doesn't remove, the top element in the stack
     end
-  end
+end
+
+class Queue
+
+    def initialize
+        @curr_queue = Array.new
+    end
+
+    def enqueue(el)
+        @curr_queue << el
+    end
+
+    def dequeue
+        @curr_queue.shift
+    end
+
+    def peek
+        @curr_queue[-1]
+    end
+
+end
