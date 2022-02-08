@@ -17,6 +17,14 @@ class UsersController < ApplicationController
     render :new
   end
 
+
+  def create
+    msg = UserMailer.welcome_email(@user)
+    msg.deliver_now
+
+    render :root
+  end
+
   private
   
   def user_params
